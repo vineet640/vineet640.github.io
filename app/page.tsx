@@ -8,7 +8,9 @@ export default function Home() {
             <img
               src="/profile.jpg"
               alt="Vineet Burugu"
-              className="h-32 w-32 rounded-full object-cover"
+              className="h-32 w-32 rounded-full object-cover border-2 border-gray-200"
+              width={128}
+              height={128}
             />
           </div>
           <div className="flex-1">
