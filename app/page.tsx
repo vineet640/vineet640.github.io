@@ -50,7 +50,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://github.com/vineetburugu"
+                href="https://github.com/vineet640"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black hover:text-gray-600"
