@@ -5,7 +5,11 @@ export default function Home() {
         {/* Profile Section */}
         <div className="mb-12 flex flex-col gap-6 sm:flex-row">
           <div className="flex-shrink-0">
-            <div className="h-32 w-32 rounded-full bg-gray-200"></div>
+            <img
+              src="/profile.jpg"
+              alt="Vineet Burugu"
+              className="h-32 w-32 rounded-full object-cover"
+            />
           </div>
           <div className="flex-1">
             <h1 className="mb-3 text-3xl font-bold text-black">Vineet Burugu</h1>
