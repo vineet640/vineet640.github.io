@@ -6,7 +6,7 @@ export default function Home() {
         <div className="mb-12 flex flex-col gap-6 sm:flex-row">
           <div className="flex-shrink-0">
             <img
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Vineet Burugu"
               className="h-32 w-32 rounded-full object-cover border-2 border-gray-200"
               width={128}
