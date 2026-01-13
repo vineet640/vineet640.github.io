@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vineet Burugu",
   description: "Personal website of Vineet Burugu",
+  icons: {
+    icon: "/profile.png",
+  },
 };
 
 export default function RootLayout({
