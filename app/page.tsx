@@ -126,7 +126,7 @@ export default function Home() {
             <div className="text-sm text-gray-700">
               Bachelor of Science in Statistics and Data Science, Minor in Computer Science
             </div>
-            <div className="text-sm text-gray-600">Expected May 2027 • GPA: 3.93</div>
+            <div className="text-sm text-gray-600">Expected May 2027 • GPA: 3.92</div>
             <div className="mt-2 text-sm text-gray-700">
               <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Probability & Statistical Inference, Statistical Modeling, Data Science, Linear Algebra, Discrete Mathematics, Multivariable Calculus
             </div>
