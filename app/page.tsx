@@ -32,7 +32,7 @@ export default function Home() {
                 My interests include machine learning, data science, software engineering, and time series forecasting. 
                 I'm excited about leveraging data to solve real-world problems and building scalable applications that make an impact.
               </p>
-              <p>Please feel free to reach out — I'd love to chat!</p>
+              <p>Please feel free to reach out, I'd love to chat!</p>
             </div>
             <div className="mb-4 text-sm text-black">
               <p>vineetburugu [at] utexas [dot] edu</p>
