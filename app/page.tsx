@@ -8,7 +8,7 @@ export default function Home() {
             <img
               src="/profile.jpg"
               alt="Vineet Burugu"
-              className="h-32 w-32 rounded-full object-cover object-top border-2 border-gray-200"
+              className="h-32 w-32 rounded-full object-cover border-2 border-gray-200"
               width={128}
               height={128}
             />
