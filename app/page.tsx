@@ -94,21 +94,18 @@ export default function Home() {
               <p className="mb-2 text-sm text-gray-700">
                 Integrated and cleaned multi-resolution geoscience datasets across a 300–400 ft well interval using Python (NumPy, Pandas). Engineered high-resolution features to reconcile sampling disparities. Applied PCA, KMeans, logistic regression, and random forest models with nested cross-validation.
               </p>
-              <div className="text-xs text-gray-500">Python, NumPy, Pandas, Scikit-learn, PCA, KMeans, Random Forest</div>
             </div>
             <div>
               <h3 className="mb-2 font-semibold text-black">Criminal Activity Prediction with Machine Learning</h3>
               <p className="mb-2 text-sm text-gray-700">
                 Collected, cleaned, and integrated crime and socioeconomic data for 58 California counties over 9 years using MySQL and Python. Engineered population- and income-adjusted crime rates and trained five machine learning models. The best-performing neural network achieved 92% accuracy; results published in JEI.
               </p>
-              <div className="text-xs text-gray-500">SQL, Python, Orange Data Mining</div>
             </div>
             <div>
               <h3 className="mb-2 font-semibold text-black">Predicting COVID-19 Outcomes Based on Demographics</h3>
               <p className="mb-2 text-sm text-gray-700">
                 Processed 20+ demographic datasets from CDC and Johns Hopkins covering 100K+ COVID-19 cases across 9 U.S. regions. Developed a three-stage Python algorithm to estimate mortality risk by age, gender, and race. Visualized regional trends and disparities using R; results published in JSR.
               </p>
-              <div className="text-xs text-gray-500">Python, R</div>
             </div>
           </div>
         </section>
