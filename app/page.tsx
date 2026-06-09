@@ -69,24 +69,20 @@ export default function Home() {
           <h2 className="mb-6 text-2xl font-bold text-black">Experience</h2>
           <div className="space-y-6">
             <div>
+              <div className="font-semibold text-black">Molex (a Koch company)</div>
+              <div className="text-sm text-gray-700">Software Engineer Intern, May 2026 – Present · Austin, TX</div>
+            </div>
+            <div>
               <div className="font-semibold text-black">AriesView</div>
-              <div className="text-sm text-gray-700">Software Developer Intern, Aug. 2025 – Dec. 2025</div>
+              <div className="text-sm text-gray-700">Software Engineer Intern, Aug. 2025 – Dec. 2025 · Boston, MA</div>
             </div>
             <div>
               <div className="font-semibold text-black">Austin Energy</div>
-              <div className="text-sm text-gray-700">Data Science Intern, Jan. 2025 – Aug. 2025</div>
+              <div className="text-sm text-gray-700">Data Science Intern, Jan. 2025 – Aug. 2025 · Austin, TX</div>
             </div>
             <div>
-              <div className="font-semibold text-black">Convergent</div>
-              <div className="text-sm text-gray-700">Software Engineer, Jan. 2025 – Jun. 2025</div>
-            </div>
-            <div>
-              <div className="font-semibold text-black">Geometry of Space Lab</div>
-              <div className="text-sm text-gray-700">Machine Learning Researcher, Jun. 2023 – Mar. 2024</div>
-            </div>
-            <div>
-              <div className="font-semibold text-black">iCode School Franchise</div>
-              <div className="text-sm text-gray-700">Lead Programming Instructor, Feb. 2023 – Jun. 2024</div>
+              <div className="font-semibold text-black">Mitra Lab</div>
+              <div className="text-sm text-gray-700">Machine Learning Researcher, Jun. 2023 – Mar. 2024 · Austin, TX</div>
             </div>
           </div>
         </section>
@@ -96,48 +92,33 @@ export default function Home() {
           <h2 className="mb-6 text-2xl font-bold text-black">Projects</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="mb-2 font-semibold text-black">
+              <h3 className="mb-1 font-semibold text-black">Sepsis Support App</h3>
+              <div className="mb-2 text-xs text-gray-500">Python, FastAPI, React, MongoDB, Gemini, ElevenLabs</div>
+              <p className="text-sm text-gray-700">
+                Built a FastAPI + React app on sepsis cohort data featuring a risk engine, patient timelines, and care-process metrics. Integrated Gemini generative AI and ElevenLabs narration with API-served audio; MongoDB for cases and access logs. Implemented a Solana devnet memo audit trail and deployed via Docker on Render + Vercel with a custom domain.
+              </p>
+            </div>
+            <div>
+              <h3 className="mb-1 font-semibold text-black">Pediatric PT App</h3>
+              <div className="mb-2 text-xs text-gray-500">React Native, Firebase, Firestore</div>
+              <p className="text-sm text-gray-700">
+                Full-stack pediatric physical therapy app with 6-week programs and 120+ exercise videos across 10+ clinics with secure parent login. Built real-time progress tracking using Firestore snapshot listeners and role-based rules for live collaboration. Won Best Overall Pitch out of 200+ members at Texas Convergent Demo Day.
+              </p>
+            </div>
+            <div>
+              <h3 className="mb-1 font-semibold text-black">
                 <a
                   href="https://docs.google.com/presentation/d/1KUJuXl_p9bHLPgoGc6tunuMYjCOQ21rJHnIFzsdjkW8/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black hover:text-blue-600 hover:underline"
                 >
-                  Predicting Cyclothems Using Mineralogy and Wireline Data
+                  Predicting Oil using Mineralogy + Wireline Data
                 </a>
               </h3>
-              <p className="mb-2 text-sm text-gray-700">
-                Integrated and cleaned multi-resolution geoscience datasets across a 300–400 ft well interval using Python (NumPy, Pandas). Engineered high-resolution features to reconcile sampling disparities. Applied PCA, KMeans, logistic regression, and random forest models with nested cross-validation.
-              </p>
-            </div>
-            <div>
-              <h3 className="mb-2 font-semibold text-black">
-                <a
-                  href="https://emerginginvestigators.org/articles/22-250"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:text-blue-600 hover:underline"
-                >
-                  Criminal Activity Prediction with Machine Learning
-                </a>
-              </h3>
-              <p className="mb-2 text-sm text-gray-700">
-                Collected, cleaned, and integrated crime and socioeconomic data for 58 California counties over 9 years using MySQL and Python. Engineered population- and income-adjusted crime rates and trained five machine learning models. The best-performing neural network achieved 92% accuracy; results published in JEI.
-              </p>
-            </div>
-            <div>
-              <h3 className="mb-2 font-semibold text-black">
-                <a
-                  href="https://www.jsr.org/hs/index.php/path/article/view/1635"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:text-blue-600 hover:underline"
-                >
-                  Predicting COVID-19 Outcomes Based on Demographics
-                </a>
-              </h3>
-              <p className="mb-2 text-sm text-gray-700">
-                Processed 20+ demographic datasets from CDC and Johns Hopkins covering 100K+ COVID-19 cases across 9 U.S. regions. Developed a three-stage Python algorithm to estimate mortality risk by age, gender, and race. Visualized regional trends and disparities using R; results published in JSR.
+              <div className="mb-2 text-xs text-gray-500">Python, Scikit-learn, Pandas, NumPy</div>
+              <p className="text-sm text-gray-700">
+                Built an end-to-end data pipeline to clean multi-resolution datasets and engineer high-resolution features from sparse inputs. Implemented and evaluated K-Means, PCA, Logistic Regression, and Random Forest models with cross-validation. Developed a predictive modeling workflow to infer missing values; achieved 3rd place at the hackathon.
               </p>
             </div>
           </div>
@@ -155,7 +136,7 @@ export default function Home() {
             </div>
             <div className="text-sm text-gray-600">Expected May 2027 • GPA: 3.92</div>
             <div className="mt-2 text-sm text-gray-700">
-              <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Probability & Statistical Inference, Statistical Modeling, Data Science, Linear Algebra, Discrete Mathematics, Multivariable Calculus
+              <strong>Relevant Coursework:</strong> Machine Learning, Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Probability, Statistical Modeling, Data Science, Linear Algebra, Discrete Mathematics, Multivariable Calculus
             </div>
           </div>
         </section>
