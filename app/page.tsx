@@ -3,17 +3,8 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <main className="mx-auto max-w-3xl px-6 py-12 sm:px-8">
         {/* Profile Section */}
-        <div className="mb-12 flex flex-col gap-6 sm:flex-row">
-          <div className="flex-shrink-0">
-            <img
-              src="/profile.png"
-              alt="Vineet Burugu"
-              className="h-32 w-32 rounded-full object-cover border-2 border-gray-200"
-              width={128}
-              height={128}
-            />
-          </div>
-          <div className="flex-1">
+        <div className="mb-12">
+          <div>
             <h1 className="mb-3 text-3xl font-bold text-black">Vineet Burugu</h1>
             <div className="mb-4 space-y-2 text-base leading-relaxed text-black">
               <p>
