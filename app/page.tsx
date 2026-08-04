@@ -85,13 +85,13 @@ export default function Home() {
             <div>
               <h3 className="mb-2 font-semibold text-black">Sepsis Support App</h3>
               <p className="text-sm text-gray-700">
-                Built a FastAPI + React app on sepsis cohort data featuring a risk engine, patient timelines, and care-process metrics. Integrated Gemini generative AI and ElevenLabs narration with API-served audio; MongoDB for cases and access logs. Implemented a Solana devnet memo audit trail and deployed via Docker on Render + Vercel with a custom domain.
+                A clinical decision-support tool for sepsis care that surfaces patient risk scores, timelines, and care-process metrics alongside AI-generated narrated summaries and a tamper-evident audit trail.
               </p>
             </div>
             <div>
               <h3 className="mb-2 font-semibold text-black">Pediatric PT App</h3>
               <p className="text-sm text-gray-700">
-                Full-stack pediatric physical therapy app with 6-week programs and 120+ exercise videos across 10+ clinics with secure parent login. Built real-time progress tracking using Firestore snapshot listeners and role-based rules for live collaboration. Won Best Overall Pitch out of 200+ members at Texas Convergent Demo Day.
+                A pediatric physical therapy app delivering 6-week programs and 120+ exercise videos to 10+ clinics with real-time progress tracking shared between parents and therapists, winning Best Overall Pitch out of 200+ members at Texas Convergent Demo Day.
               </p>
             </div>
             <div>
@@ -106,7 +106,7 @@ export default function Home() {
                 </a>
               </h3>
               <p className="text-sm text-gray-700">
-                Built an end-to-end data pipeline to clean multi-resolution datasets and engineer high-resolution features from sparse inputs. Implemented and evaluated K-Means, PCA, Logistic Regression, and Random Forest models with cross-validation. Developed a predictive modeling workflow to infer missing values; achieved 3rd place at the hackathon.
+                An end-to-end modeling pipeline that infers oil presence from sparse mineralogy and wireline measurements by engineering high-resolution features out of coarse well data, placing 3rd at the hackathon.
               </p>
             </div>
           </div>
