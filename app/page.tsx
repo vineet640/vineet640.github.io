@@ -344,10 +344,10 @@ export default function Home() {
 
             <div className="catlinks">
               <b className="catlinks-label">Categories:</b>
-              <span>Data science students</span>
               <span>University of Texas at Austin</span>
               <span>Machine learning</span>
               <span>Software engineering</span>
+              <span>Data Science</span>
             </div>
           </article>
         </main>
