@@ -131,22 +131,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Skills Section */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-bold text-black">Skills</h2>
-          <div className="space-y-3 text-sm text-gray-700">
-            <div>
-              <strong>Languages & Tools:</strong> Python, R, SQL, JavaScript, Bash, C++, Firebase, Git, Docker, Jupyter, VS Code, Tableau, R Shiny
-            </div>
-            <div>
-              <strong>Libraries & Frameworks:</strong> Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow, Matplotlib, Plotly, Orange, React Native
-            </div>
-            <div>
-              <strong>Core Skills:</strong> Machine Learning, Time Series Forecasting, Anomaly Detection, RAG (Retrieval-Augmented Generation), NLP (Natural Language Processing), Feature Engineering, Statistical Modeling, A/B Testing, Dashboarding, Model Evaluation
-            </div>
-          </div>
-        </section>
       </main>
     </div>
   );
