@@ -83,7 +83,16 @@ export default function Home() {
           <h2 className="mb-6 text-2xl font-bold text-black">Projects</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="mb-2 font-semibold text-black">Sepsis Support App</h3>
+              <h3 className="mb-2 font-semibold text-black">
+                <a
+                  href="https://devpost.com/software/sepsis-copilot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-blue-600 hover:underline"
+                >
+                  Sepsis Support App
+                </a>
+              </h3>
               <p className="text-sm text-gray-700">
                 A clinical decision-support tool for sepsis care that surfaces patient risk scores, timelines, and care-process metrics alongside AI-generated narrated summaries and a tamper-evident audit trail.
               </p>
