@@ -83,21 +83,19 @@ export default function Home() {
           <h2 className="mb-6 text-2xl font-bold text-black">Projects</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="mb-1 font-semibold text-black">Sepsis Support App</h3>
-              <div className="mb-2 text-xs text-gray-500">Python, FastAPI, React, MongoDB, Gemini, ElevenLabs</div>
+              <h3 className="mb-2 font-semibold text-black">Sepsis Support App</h3>
               <p className="text-sm text-gray-700">
                 Built a FastAPI + React app on sepsis cohort data featuring a risk engine, patient timelines, and care-process metrics. Integrated Gemini generative AI and ElevenLabs narration with API-served audio; MongoDB for cases and access logs. Implemented a Solana devnet memo audit trail and deployed via Docker on Render + Vercel with a custom domain.
               </p>
             </div>
             <div>
-              <h3 className="mb-1 font-semibold text-black">Pediatric PT App</h3>
-              <div className="mb-2 text-xs text-gray-500">React Native, Firebase, Firestore</div>
+              <h3 className="mb-2 font-semibold text-black">Pediatric PT App</h3>
               <p className="text-sm text-gray-700">
                 Full-stack pediatric physical therapy app with 6-week programs and 120+ exercise videos across 10+ clinics with secure parent login. Built real-time progress tracking using Firestore snapshot listeners and role-based rules for live collaboration. Won Best Overall Pitch out of 200+ members at Texas Convergent Demo Day.
               </p>
             </div>
             <div>
-              <h3 className="mb-1 font-semibold text-black">
+              <h3 className="mb-2 font-semibold text-black">
                 <a
                   href="https://docs.google.com/presentation/d/1KUJuXl_p9bHLPgoGc6tunuMYjCOQ21rJHnIFzsdjkW8/edit?usp=sharing"
                   target="_blank"
@@ -107,7 +105,6 @@ export default function Home() {
                   Predicting Oil using Mineralogy + Wireline Data
                 </a>
               </h3>
-              <div className="mb-2 text-xs text-gray-500">Python, Scikit-learn, Pandas, NumPy</div>
               <p className="text-sm text-gray-700">
                 Built an end-to-end data pipeline to clean multi-resolution datasets and engineer high-resolution features from sparse inputs. Implemented and evaluated K-Means, PCA, Logistic Regression, and Random Forest models with cross-validation. Developed a predictive modeling workflow to infer missing values; achieved 3rd place at the hackathon.
               </p>
