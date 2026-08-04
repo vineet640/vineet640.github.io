@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type TextSize = "small" | "standard" | "large";
@@ -23,6 +24,55 @@ const SECTIONS = [
   },
   { id: "external-links", label: "External links" },
 ];
+
+/* Every preview renders in a box of identical dimensions: the media area is a
+   fixed width with a locked aspect ratio, and images are cropped to fill it,
+   so source images of differing sizes still line up. */
+function ProjectPreview({
+  embed,
+  src,
+  href,
+  caption,
+}: {
+  /* A live, scrollable embed of the project itself. Only works for targets
+     that permit framing; falls back to a screenshot otherwise. */
+  embed?: string;
+  src?: string;
+  href: string;
+  caption: string;
+}) {
+  return (
+    <figure className="thumb">
+      {embed ? (
+        <div className="thumb-media">
+          <iframe src={embed} title={`${caption} preview`} loading="lazy" />
+        </div>
+      ) : (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <span className="thumb-media">
+            {src ? (
+              <Image
+                src={src}
+                alt={`${caption} preview`}
+                /* Intrinsic size of the source: the box scales it down, which
+                   is what keeps it sharp on high-DPI screens. */
+                width={2400}
+                height={1120}
+              />
+            ) : (
+              <span className="thumb-empty">No preview yet</span>
+            )}
+          </span>
+        </a>
+      )}
+      <figcaption>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {caption}
+        </a>
+      </figcaption>
+    </figure>
+  );
+}
 
 function Radio<T extends string>({
   name,
@@ -257,34 +307,62 @@ export default function Home() {
               Projects
             </h2>
 
-            <h3 className="wiki-h3" id="sepsis-support-app">
-              Sepsis Support App
-            </h3>
-            <p>
-              A clinical decision-support tool for sepsis care that surfaces
-              patient risk scores, timelines, and care-process metrics alongside
-              AI-generated narrated summaries and a tamper-evident audit trail.
-            </p>
+            <div className="project">
+              <div className="project-body">
+                <h3 className="wiki-h3" id="sepsis-support-app">
+                  Sepsis Support App
+                </h3>
+                <p>
+                  A clinical decision-support tool for sepsis care that surfaces
+                  patient risk scores, timelines, and care-process metrics
+                  alongside AI-generated narrated summaries and a tamper-evident
+                  audit trail.
+                </p>
+              </div>
+              <ProjectPreview
+                src="/projects/sepsis.jpg"
+                href="https://devpost.com/software/sepsis-copilot"
+                caption="Sepsis Support App on Devpost"
+              />
+            </div>
 
-            <h3 className="wiki-h3" id="pediatric-physical-therapy-app">
-              Pediatric Physical Therapy App
-            </h3>
-            <p>
-              A pediatric physical therapy app delivering multi-week exercise
-              programs to partner clinics with real-time progress tracking
-              shared between parents and therapists, winning Best Overall Pitch
-              at Texas Convergent Demo Day.
-            </p>
+            <div className="project">
+              <div className="project-body">
+                <h3 className="wiki-h3" id="pediatric-physical-therapy-app">
+                  Pediatric Physical Therapy App
+                </h3>
+                <p>
+                  A pediatric physical therapy app delivering multi-week
+                  exercise programs to partner clinics with real-time progress
+                  tracking shared between parents and therapists, winning Best
+                  Overall Pitch at Texas Convergent Demo Day.
+                </p>
+              </div>
+              <ProjectPreview
+                embed="https://docs.google.com/presentation/d/1O6kh-3y9QqPzNwJzpkv1aTZYx-m2yZQKV3YyHeIV-IY/embed?start=false&loop=false&delayms=3000#slide=id.g351708dcf5b_0_109"
+                href="https://docs.google.com/presentation/d/1O6kh-3y9QqPzNwJzpkv1aTZYx-m2yZQKV3YyHeIV-IY/edit?usp=sharing"
+                caption="Pediatric Physical Therapy App slide deck"
+              />
+            </div>
 
-            <h3 className="wiki-h3" id="predicting-oil-using-mineral-data">
-              Predicting Oil using Mineral Data
-            </h3>
-            <p>
-              An end-to-end modeling pipeline that infers oil presence from
-              sparse mineralogy and wireline measurements by engineering
-              high-resolution features out of coarse well data, earning a
-              top-three finish at the hackathon.
-            </p>
+            <div className="project">
+              <div className="project-body">
+                <h3 className="wiki-h3" id="predicting-oil-using-mineral-data">
+                  Predicting Oil using Mineral Data
+                </h3>
+                <p>
+                  An end-to-end modeling pipeline that infers oil presence from
+                  sparse mineralogy and wireline measurements by engineering
+                  high-resolution features out of coarse well data, earning a
+                  top-three finish at the hackathon.
+                </p>
+              </div>
+              <ProjectPreview
+                embed="https://docs.google.com/presentation/d/1KUJuXl_p9bHLPgoGc6tunuMYjCOQ21rJHnIFzsdjkW8/embed?start=false&loop=false&delayms=3000"
+                href="https://docs.google.com/presentation/d/1KUJuXl_p9bHLPgoGc6tunuMYjCOQ21rJHnIFzsdjkW8/edit?usp=sharing"
+                caption="Predicting Oil using Mineral Data slide deck"
+              />
+            </div>
 
             <h2 className="wiki-h2" id="external-links">
               External links
