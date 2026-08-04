@@ -347,7 +347,7 @@ export default function Home() {
               <span>University of Texas at Austin</span>
               <span>Machine learning</span>
               <span>Software engineering</span>
-              <span>Data Science</span>
+              <span>Data science</span>
             </div>
           </article>
         </main>
