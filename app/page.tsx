@@ -20,8 +20,7 @@ export default function Home() {
                 , with a minor in Computer Science, graduating in May 2028.
               </p>
               <p>
-                My interests include machine learning, data science, software engineering, and time series forecasting. 
-                I'm excited about leveraging data to solve real-world problems and building scalable applications that make an impact.
+                My interests include machine learning, data science, software engineering, and time series forecasting.
               </p>
               <p>Please feel free to reach out, I'd love to chat!</p>
             </div>
