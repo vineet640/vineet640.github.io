@@ -89,7 +89,16 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h3 className="mb-2 font-semibold text-black">Pediatric Physical Therapy App</h3>
+              <h3 className="mb-2 font-semibold text-black">
+                <a
+                  href="https://docs.google.com/presentation/d/1O6kh-3y9QqPzNwJzpkv1aTZYx-m2yZQKV3YyHeIV-IY/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-blue-600 hover:underline"
+                >
+                  Pediatric Physical Therapy App
+                </a>
+              </h3>
               <p className="text-sm text-gray-700">
                 A pediatric physical therapy app delivering multi-week exercise programs to partner clinics with real-time progress tracking shared between parents and therapists, winning Best Overall Pitch at Texas Convergent Demo Day.
               </p>
