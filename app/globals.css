@@ -266,19 +266,6 @@ body {
   margin: 1.25rem 0 0.35rem;
 }
 
-.mw-editsection {
-  font-family: var(--sans);
-  font-size: 0.8125rem;
-  font-weight: normal;
-  color: var(--border);
-  white-space: nowrap;
-  margin-left: 0.5rem;
-}
-
-.mw-editsection span {
-  color: var(--link);
-}
-
 .infobox {
   float: right;
   clear: right;

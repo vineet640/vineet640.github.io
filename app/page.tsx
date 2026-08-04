@@ -24,14 +24,6 @@ const SECTIONS = [
   { id: "external-links", label: "External links" },
 ];
 
-function EditLink() {
-  return (
-    <span className="mw-editsection">
-      [ <span>edit</span> ]
-    </span>
-  );
-}
-
 function Radio<T extends string>({
   name,
   value,
@@ -193,7 +185,6 @@ export default function Home() {
 
             <h2 className="wiki-h2" id="education">
               Education
-              <EditLink />
             </h2>
             <p>
               I&apos;m pursuing a Bachelor of Science in Data Science and
@@ -209,7 +200,6 @@ export default function Home() {
 
             <h2 className="wiki-h2" id="experience">
               Experience
-              <EditLink />
             </h2>
             <div className="wiki-table-wrap">
               <table className="wikitable">
@@ -252,7 +242,6 @@ export default function Home() {
 
             <h2 className="wiki-h2" id="projects">
               Projects
-              <EditLink />
             </h2>
 
             <h3 className="wiki-h3" id="sepsis-support-app">
@@ -286,7 +275,6 @@ export default function Home() {
 
             <h2 className="wiki-h2" id="external-links">
               External links
-              <EditLink />
             </h2>
             <ul className="wiki-list">
               <li>
