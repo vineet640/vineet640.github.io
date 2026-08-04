@@ -17,7 +17,7 @@ export default function Home() {
                 >
                   The University of Texas at Austin
                 </a>
-                , with a minor in Computer Science, graduating in May 2027.
+                , with a minor in Computer Science, graduating in May 2028.
               </p>
               <p>
                 My interests include machine learning, data science, software engineering, and time series forecasting. 
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="text-sm text-gray-700">
               Bachelor of Science in Statistics and Data Science, Minor in Computer Science
             </div>
-            <div className="text-sm text-gray-600">Expected May 2027 • GPA: 3.92</div>
+            <div className="text-sm text-gray-600">Expected May 2028 • GPA: 3.92</div>
             <div className="mt-2 text-sm text-gray-700">
               <strong>Relevant Coursework:</strong> Machine Learning, Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Probability, Statistical Modeling, Data Science, Linear Algebra, Discrete Mathematics, Multivariable Calculus
             </div>
