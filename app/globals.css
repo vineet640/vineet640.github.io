@@ -89,123 +89,6 @@ body {
   text-decoration: underline;
 }
 
-/* ---------- Header ---------- */
-.skin-header {
-  max-width: 99.75rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1.5rem;
-  flex-wrap: wrap;
-}
-
-.skin-hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  width: 2.75rem;
-  height: 2.75rem;
-  padding: 0 0.55rem;
-  border: none;
-  background: none;
-  border-radius: 2px;
-  cursor: pointer;
-  flex: none;
-}
-
-.skin-hamburger:hover {
-  background: var(--hover);
-}
-
-.skin-hamburger span {
-  display: block;
-  height: 2px;
-  background: var(--text);
-}
-
-.skin-wordmark {
-  flex: none;
-  line-height: 1.15;
-  margin-right: 0.5rem;
-}
-
-.skin-wordmark-name {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text);
-}
-
-.skin-wordmark-tagline {
-  font-size: 0.6875rem;
-  color: var(--text-subtle);
-  letter-spacing: 0.01em;
-}
-
-.skin-search {
-  display: flex;
-  flex: 1 1 18rem;
-  max-width: 31.25rem;
-  min-width: 0;
-}
-
-.skin-search-field {
-  position: relative;
-  flex: 1;
-  min-width: 0;
-}
-
-.skin-search-icon {
-  position: absolute;
-  left: 0.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-subtle);
-  pointer-events: none;
-  line-height: 0;
-}
-
-.skin-search input {
-  width: 100%;
-  padding: 0.5rem 0.6rem 0.5rem 2.1rem;
-  border: 1px solid var(--border);
-  border-right: none;
-  border-radius: 2px 0 0 2px;
-  background: var(--bg);
-  color: var(--text);
-  font: inherit;
-}
-
-.skin-search input:focus {
-  outline: 2px solid var(--link);
-  outline-offset: -2px;
-}
-
-.skin-search button {
-  padding: 0.5rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 0 2px 2px 0;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  cursor: pointer;
-  flex: none;
-}
-
-.skin-search button:hover {
-  background: var(--surface-2);
-}
-
-.skin-header-links {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto;
-  flex: none;
-}
-
 /* ---------- Layout ---------- */
 .skin-main {
   display: grid;
@@ -216,7 +99,7 @@ body {
   /* @max-width-page-container: 1596px */
   max-width: 99.75rem;
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 1.5rem 1.5rem 4rem;
 }
 
 .skin-rail {
@@ -542,27 +425,13 @@ body {
 @media (max-width: 69.99rem) {
   .skin-main {
     grid-template-columns: minmax(0, 1fr);
-    padding: 0 1rem 3rem;
+    padding: 1rem 1rem 3rem;
   }
 
   .skin-rail-left {
     display: none;
   }
 
-  .skin-header {
-    padding: 0.75rem 1rem;
-  }
-
-  .skin-header-links {
-    order: 3;
-    margin-left: 0;
-  }
-
-  .skin-search {
-    order: 4;
-    flex-basis: 100%;
-    max-width: none;
-  }
 }
 
 /* @max-width-breakpoint-mobile: 639px */

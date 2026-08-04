@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 
 type TextSize = "small" | "standard" | "large";
 type PageWidth = "standard" | "wide";
@@ -64,16 +64,6 @@ export default function Home() {
   const [colorMode, setColorMode] = useState<ColorMode>("automatic");
   const [tocHidden, setTocHidden] = useState(false);
   const [appearanceHidden, setAppearanceHidden] = useState(false);
-  const [query, setQuery] = useState("");
-
-  function handleSearch(event: FormEvent) {
-    event.preventDefault();
-    const q = query.trim().toLowerCase();
-    if (!q) return;
-    const match = SECTIONS.find((s) => s.label.toLowerCase().includes(q));
-    const target = document.getElementById(match ? match.id : "top");
-    target?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
 
   return (
     <div
@@ -82,75 +72,6 @@ export default function Home() {
       data-width={pageWidth}
       data-color={colorMode}
     >
-      <header className="skin-header">
-        <button
-          type="button"
-          className="skin-hamburger"
-          aria-label={tocHidden ? "Show contents" : "Hide contents"}
-          aria-expanded={!tocHidden}
-          onClick={() => setTocHidden((v) => !v)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
-        <div className="skin-wordmark">
-          <div className="skin-wordmark-name">Vineet Burugu</div>
-          <div className="skin-wordmark-tagline">
-            statistics, data science &amp; software
-          </div>
-        </div>
-
-        <form className="skin-search" role="search" onSubmit={handleSearch}>
-          <div className="skin-search-field">
-            <span className="skin-search-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-                <circle
-                  cx="8.5"
-                  cy="8.5"
-                  r="5.5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M13 13l4.5 4.5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search this site"
-              aria-label="Search this site"
-            />
-          </div>
-          <button type="submit">Search</button>
-        </form>
-
-        <nav className="skin-header-links">
-          <a
-            href="https://linkedin.com/in/vineetburugu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/vineet640"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a href="mailto:vineetburugu@utexas.edu">Email</a>
-        </nav>
-      </header>
-
       <div className="skin-main">
         <aside className="skin-rail skin-rail-left" aria-label="Contents">
           <div className="rail-heading">
