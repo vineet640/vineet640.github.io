@@ -119,18 +119,6 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="vector-tabs">
-            <ul>
-              <li className="is-selected">Article</li>
-              <li>Talk</li>
-            </ul>
-            <ul>
-              <li className="is-selected">Read</li>
-              <li>Edit</li>
-              <li>View history</li>
-            </ul>
-          </div>
-
           <div className="site-sub">From the personal site of Vineet Burugu</div>
 
           <article className="skin-article">

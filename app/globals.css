@@ -131,6 +131,8 @@ body {
 
 /* ---------- Title, tabs ---------- */
 .page-title-row {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.3rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -154,34 +156,6 @@ body {
   color: var(--link);
   font-weight: bold;
   white-space: nowrap;
-}
-
-.vector-tabs {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  border-bottom: 1px solid var(--border-light);
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  flex-wrap: wrap;
-}
-
-.vector-tabs ul {
-  display: flex;
-  gap: 1.1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.vector-tabs li {
-  padding: 0.35rem 0;
-  color: var(--link);
-}
-
-.vector-tabs li.is-selected {
-  color: var(--text);
-  box-shadow: inset 0 -2px 0 0 var(--text);
 }
 
 .site-sub {
