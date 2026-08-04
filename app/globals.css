@@ -7,16 +7,19 @@
   --text-subtle: #54595d;
   --border: #a2a9b1;
   --border-light: #c8ccd1;
-  --link: #3366cc;
-  --link-visited: #795cb2;
+  --link: #36c;
+  --link-visited: #6a60b0;
   --surface: #f8f9fa;
   --surface-2: #eaecf0;
   --hover: #eaecf0;
-  --serif: "Linux Libertine", Georgia, "Times New Roman", Times, serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
-    Helvetica, sans-serif;
+  --serif: "Linux Libertine", "Georgia", "Times", "Source Serif 4", serif;
+  --sans: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Inter",
+    "Helvetica", "Arial", sans-serif;
   --content-fs: 1rem;
-  --content-max: 58rem;
+  /* @max-width-content-container: 948px */
+  --content-max: 59.25rem;
+  /* @width-column-desktop: 196px */
+  --rail-width: 12.25rem;
 }
 
 .skin[data-text="small"] {
@@ -31,15 +34,16 @@
   --content-max: none;
 }
 
+/* Codex dark mode: modes/dark.json resolved against wikimedia-ui palette */
 .skin[data-color="dark"] {
   --bg: #101418;
-  --text: #f8f9fa;
+  --text: #eaecf0;
   --text-subtle: #a2a9b1;
-  --border: #54595d;
+  --border: #72777d;
   --border-light: #54595d;
   --link: #88a3e8;
   --link-visited: #a799cd;
-  --surface: #27292d;
+  --surface: #202122;
   --surface-2: #27292d;
   --hover: #27292d;
 }
@@ -47,13 +51,13 @@
 @media (prefers-color-scheme: dark) {
   .skin[data-color="automatic"] {
     --bg: #101418;
-    --text: #f8f9fa;
+    --text: #eaecf0;
     --text-subtle: #a2a9b1;
-    --border: #54595d;
+    --border: #72777d;
     --border-light: #54595d;
     --link: #88a3e8;
     --link-visited: #a799cd;
-    --surface: #27292d;
+    --surface: #202122;
     --surface-2: #27292d;
     --hover: #27292d;
   }
@@ -87,6 +91,8 @@ body {
 
 /* ---------- Header ---------- */
 .skin-header {
+  max-width: 99.75rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -142,7 +148,7 @@ body {
 .skin-search {
   display: flex;
   flex: 1 1 18rem;
-  max-width: 34rem;
+  max-width: 31.25rem;
   min-width: 0;
 }
 
@@ -203,9 +209,13 @@ body {
 /* ---------- Layout ---------- */
 .skin-main {
   display: grid;
-  grid-template-columns: 13rem minmax(0, 1fr) 13rem;
-  gap: 2rem;
+  grid-template-columns: var(--rail-width) minmax(0, 1fr) var(--rail-width);
+  /* @grid-column-gap: 24px */
+  gap: 1.5rem;
   align-items: start;
+  /* @max-width-page-container: 1596px */
+  max-width: 99.75rem;
+  margin: 0 auto;
   padding: 0 1.5rem 4rem;
 }
 
@@ -247,7 +257,7 @@ body {
 
 .wiki-title {
   font-family: var(--serif);
-  font-size: 2rem;
+  font-size: 1.8em;
   font-weight: normal;
   line-height: 1.25;
 }
@@ -335,7 +345,7 @@ body {
 
 .skin .vector-toc a {
   display: block;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 2px;
   line-height: 1.4;
 }
@@ -385,7 +395,7 @@ body {
 /* ---------- Article furniture ---------- */
 .wiki-h2 {
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: normal;
   border-bottom: 1px solid var(--border-light);
   padding-bottom: 0.25rem;
@@ -394,7 +404,7 @@ body {
 
 .wiki-h3 {
   font-family: var(--sans);
-  font-size: 1.05em;
+  font-size: 1.2em;
   font-weight: bold;
   margin: 1.25rem 0 0.35rem;
 }
@@ -511,9 +521,16 @@ body {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 82rem) {
+/* @min-width-breakpoint-desktop-wide: 1680px -> @width-column-desktop-wide: 248px */
+@media (min-width: 105rem) {
+  .skin {
+    --rail-width: 15.5rem;
+  }
+}
+
+@media (max-width: 87.5rem) {
   .skin-main {
-    grid-template-columns: 13rem minmax(0, 1fr);
+    grid-template-columns: var(--rail-width) minmax(0, 1fr);
   }
 
   .skin-rail-right {
@@ -521,7 +538,8 @@ body {
   }
 }
 
-@media (max-width: 62rem) {
+/* Below @min-width-breakpoint-desktop: 1120px */
+@media (max-width: 69.99rem) {
   .skin-main {
     grid-template-columns: minmax(0, 1fr);
     padding: 0 1rem 3rem;
@@ -547,7 +565,8 @@ body {
   }
 }
 
-@media (max-width: 45rem) {
+/* @max-width-breakpoint-mobile: 639px */
+@media (max-width: 39.9375rem) {
   .infobox {
     float: none;
     width: 100%;
