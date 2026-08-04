@@ -8,16 +8,8 @@ export default function Home() {
             <h1 className="mb-3 text-3xl font-bold text-black">Vineet Burugu</h1>
             <div className="mb-4 space-y-2 text-base leading-relaxed text-black">
               <p>
-                I'm a Statistics and Data Science student at{" "}
-                <a
-                  href="https://www.utexas.edu"
-                  className="text-blue-600 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  The University of Texas at Austin
-                </a>
-                , with a minor in Computer Science, graduating in May 2028.
+                I'm a Data Science and Computer Science student at The University
+                of Texas at Austin, graduating in May 2028.
               </p>
               <p>
                 My interests include machine learning, data science, software engineering, and time series forecasting.
@@ -137,9 +129,9 @@ export default function Home() {
               The University of Texas at Austin
             </div>
             <div className="text-sm text-gray-700">
-              Bachelor of Science in Statistics and Data Science, Minor in Computer Science
+              Bachelor of Science in Data Science and Computer Science
             </div>
-            <div className="text-sm text-gray-600">Expected May 2028 • GPA: 3.92</div>
+            <div className="text-sm text-gray-600">Expected May 2028 • GPA: 3.84</div>
             <div className="mt-2 text-sm text-gray-700">
               <strong>Relevant Coursework:</strong> Machine Learning, Data Structures & Algorithms, Object-Oriented Programming, Database Systems, Probability, Statistical Modeling, Data Science, Linear Algebra, Discrete Mathematics, Multivariable Calculus
             </div>
