@@ -61,19 +61,19 @@ export default function Home() {
           <div className="space-y-6">
             <div>
               <div className="font-semibold text-black">Molex (a Koch company)</div>
-              <div className="text-sm text-gray-700">Software Engineer Intern, May 2026 – Present · Austin, TX</div>
+              <div className="text-sm text-gray-700">Software Engineer Intern, May 2026 – August 2026 · Austin, TX</div>
             </div>
             <div>
               <div className="font-semibold text-black">AriesView</div>
-              <div className="text-sm text-gray-700">Software Engineer Intern, Aug. 2025 – Dec. 2025 · Boston, MA</div>
+              <div className="text-sm text-gray-700">Software Engineer Intern, August 2025 – December 2025 · Boston, MA</div>
             </div>
             <div>
               <div className="font-semibold text-black">Austin Energy</div>
-              <div className="text-sm text-gray-700">Data Science Intern, Jan. 2025 – Aug. 2025 · Austin, TX</div>
+              <div className="text-sm text-gray-700">Data Science Intern, January 2025 – August 2025 · Austin, TX</div>
             </div>
             <div>
               <div className="font-semibold text-black">Mitra Lab</div>
-              <div className="text-sm text-gray-700">Machine Learning Researcher, Jun. 2023 – Mar. 2024 · Austin, TX</div>
+              <div className="text-sm text-gray-700">Machine Learning Researcher, June 2023 – March 2024 · Austin, TX</div>
             </div>
           </div>
         </section>
