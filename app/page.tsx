@@ -91,7 +91,7 @@ export default function Home() {
             <div>
               <h3 className="mb-2 font-semibold text-black">Pediatric PT App</h3>
               <p className="text-sm text-gray-700">
-                A pediatric physical therapy app delivering 6-week programs and 120+ exercise videos to 10+ clinics with real-time progress tracking shared between parents and therapists, winning Best Overall Pitch out of 200+ members at Texas Convergent Demo Day.
+                A pediatric physical therapy app delivering multi-week exercise programs to partner clinics with real-time progress tracking shared between parents and therapists, winning Best Overall Pitch at Texas Convergent Demo Day.
               </p>
             </div>
             <div>
@@ -106,7 +106,7 @@ export default function Home() {
                 </a>
               </h3>
               <p className="text-sm text-gray-700">
-                An end-to-end modeling pipeline that infers oil presence from sparse mineralogy and wireline measurements by engineering high-resolution features out of coarse well data, placing 3rd at the hackathon.
+                An end-to-end modeling pipeline that infers oil presence from sparse mineralogy and wireline measurements by engineering high-resolution features out of coarse well data, earning a top-three finish at the hackathon.
               </p>
             </div>
           </div>
