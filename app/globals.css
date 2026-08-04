@@ -73,7 +73,6 @@ body {
   color: var(--text);
   min-height: 100vh;
   font-size: 0.875rem;
-  accent-color: var(--link);
 }
 
 .skin a {
@@ -99,7 +98,24 @@ body {
   /* @max-width-page-container: 1596px */
   max-width: 99.75rem;
   margin: 0 auto;
+  /* @padding-horizontal-page-container: 24px */
   padding: 1.5rem 1.5rem 4rem;
+}
+
+/* @padding-horizontal-page-container-desktop: 44px */
+@media (min-width: 70rem) {
+  .skin-main {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+}
+
+/* @padding-horizontal-page-container-desktop-wide: 52px */
+@media (min-width: 105rem) {
+  .skin-main {
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+  }
 }
 
 .skin-rail {
@@ -176,13 +192,18 @@ body {
 }
 
 .rail-toggle {
-  padding: 0.1rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.625rem;
+  padding: 0 0.6rem;
+  /* @border-radius-base */
   border: 1px solid var(--border);
   border-radius: 2px;
-  background: none;
+  background: var(--bg);
   color: var(--text);
   font: inherit;
   font-weight: normal;
+  line-height: 1;
   cursor: pointer;
 }
 
@@ -243,14 +264,39 @@ body {
 }
 
 .appearance-option input {
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  flex: none;
   margin: 0;
-  width: 0.95rem;
-  height: 0.95rem;
+  /* @size-icon-medium: 20px */
+  width: 1.25rem;
+  height: 1.25rem;
+  /* @border-color-interactive: gray500 */
+  border: 1px solid #72777d;
+  border-radius: 50%;
+  background: var(--bg);
   cursor: pointer;
+}
+
+.appearance-option input:checked {
+  /* @border-width-input-radio--checked, @background-color-progressive */
+  border-width: 6px;
+  border-color: var(--link);
+  /* @background-color-base-fixed stays white in both modes */
+  background: #fff;
+}
+
+.appearance-option input:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 1px;
 }
 
 /* ---------- Article furniture ---------- */
 .wiki-h2 {
+  /* Establish a BFC so the rule stops at the infobox's margin edge
+     instead of running under it and butting against its border. */
+  display: flow-root;
   font-family: var(--serif);
   font-size: 1.5em;
   font-weight: normal;
@@ -402,4 +448,16 @@ body {
     width: 100%;
     margin: 0.5rem 0 1rem;
   }
+}
+
+.infobox-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.infobox-logos svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
 }
