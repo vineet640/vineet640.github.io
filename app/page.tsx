@@ -1,56 +1,218 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
+
+type TextSize = "small" | "standard" | "large";
+type PageWidth = "standard" | "wide";
+type ColorMode = "automatic" | "light" | "dark";
+
+const SECTIONS = [
+  { id: "education", label: "Education" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "sepsis-support-app", label: "Sepsis Support App", sub: true },
+  {
+    id: "pediatric-physical-therapy-app",
+    label: "Pediatric Physical Therapy App",
+    sub: true,
+  },
+  {
+    id: "predicting-oil-using-mineral-data",
+    label: "Predicting Oil using Mineral Data",
+    sub: true,
+  },
+  { id: "external-links", label: "External links" },
+];
+
 function EditLink() {
   return (
     <span className="mw-editsection">
-      [<span>edit</span>]
+      [ <span>edit</span> ]
     </span>
   );
 }
 
-export default function Home() {
+function Radio<T extends string>({
+  name,
+  value,
+  current,
+  onChange,
+  label,
+}: {
+  name: string;
+  value: T;
+  current: T;
+  onChange: (v: T) => void;
+  label: string;
+}) {
   return (
-    <div className="mw-container">
-      <div className="mw-layout">
-        <nav className="vector-toc" aria-label="Contents">
-          <div className="vector-toc-heading">Contents</div>
-          <ul>
-            <li>
-              <a href="#top">(Top)</a>
-            </li>
-            <li>
-              <a href="#education">Education</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
+    <label className="appearance-option">
+      <input
+        type="radio"
+        name={name}
+        checked={current === value}
+        onChange={() => onChange(value)}
+      />
+      {label}
+    </label>
+  );
+}
+
+export default function Home() {
+  const [textSize, setTextSize] = useState<TextSize>("standard");
+  const [pageWidth, setPageWidth] = useState<PageWidth>("standard");
+  const [colorMode, setColorMode] = useState<ColorMode>("automatic");
+  const [tocHidden, setTocHidden] = useState(false);
+  const [appearanceHidden, setAppearanceHidden] = useState(false);
+  const [query, setQuery] = useState("");
+
+  function handleSearch(event: FormEvent) {
+    event.preventDefault();
+    const q = query.trim().toLowerCase();
+    if (!q) return;
+    const match = SECTIONS.find((s) => s.label.toLowerCase().includes(q));
+    const target = document.getElementById(match ? match.id : "top");
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  return (
+    <div
+      className="skin"
+      data-text={textSize}
+      data-width={pageWidth}
+      data-color={colorMode}
+    >
+      <header className="skin-header">
+        <button
+          type="button"
+          className="skin-hamburger"
+          aria-label={tocHidden ? "Show contents" : "Hide contents"}
+          aria-expanded={!tocHidden}
+          onClick={() => setTocHidden((v) => !v)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div className="skin-wordmark">
+          <div className="skin-wordmark-name">Vineet Burugu</div>
+          <div className="skin-wordmark-tagline">
+            statistics, data science &amp; software
+          </div>
+        </div>
+
+        <form className="skin-search" role="search" onSubmit={handleSearch}>
+          <div className="skin-search-field">
+            <span className="skin-search-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <circle
+                  cx="8.5"
+                  cy="8.5"
+                  r="5.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M13 13l4.5 4.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search this site"
+              aria-label="Search this site"
+            />
+          </div>
+          <button type="submit">Search</button>
+        </form>
+
+        <nav className="skin-header-links">
+          <a
+            href="https://linkedin.com/in/vineetburugu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/vineet640"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a href="mailto:vineetburugu@utexas.edu">Email</a>
+        </nav>
+      </header>
+
+      <div className="skin-main">
+        <aside className="skin-rail skin-rail-left" aria-label="Contents">
+          <div className="rail-heading">
+            Contents
+            <button
+              type="button"
+              className="rail-toggle"
+              onClick={() => setTocHidden((v) => !v)}
+            >
+              {tocHidden ? "show" : "hide"}
+            </button>
+          </div>
+          {!tocHidden && (
+            <nav className="vector-toc">
               <ul>
                 <li>
-                  <a href="#sepsis-support-app">Sepsis Support App</a>
-                </li>
-                <li>
-                  <a href="#pediatric-physical-therapy-app">
-                    Pediatric Physical Therapy App
+                  <a className="is-top" href="#top">
+                    (Top)
                   </a>
                 </li>
-                <li>
-                  <a href="#predicting-oil-using-mineral-data">
-                    Predicting Oil using Mineral Data
-                  </a>
-                </li>
+                {SECTIONS.filter((s) => !s.sub).map((section) => (
+                  <li key={section.id}>
+                    <a href={`#${section.id}`}>{section.label}</a>
+                    {section.id === "projects" && (
+                      <ul>
+                        {SECTIONS.filter((s) => s.sub).map((sub) => (
+                          <li key={sub.id}>
+                            <a href={`#${sub.id}`}>{sub.label}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
               </ul>
-            </li>
-            <li>
-              <a href="#external-links">External links</a>
-            </li>
-          </ul>
-        </nav>
+            </nav>
+          )}
+        </aside>
 
-        <main className="mw-content" id="top">
-          <h1 className="wiki-title">Vineet Burugu</h1>
+        <main className="skin-content" id="top">
+          <div className="page-title-row">
+            <h1 className="wiki-title">Vineet Burugu</h1>
+            <a className="languages-button" href="#external-links">
+              5 external links
+            </a>
+          </div>
+
+          <div className="vector-tabs">
+            <ul>
+              <li className="is-selected">Article</li>
+              <li>Talk</li>
+            </ul>
+            <ul>
+              <li className="is-selected">Read</li>
+              <li>Edit</li>
+              <li>View history</li>
+            </ul>
+          </div>
+
           <div className="site-sub">From the personal site of Vineet Burugu</div>
 
-          <div className="mw-body">
+          <article className="skin-article">
             <table className="infobox">
               <tbody>
                 <tr>
@@ -121,7 +283,7 @@ export default function Home() {
             <p>Please feel free to reach out, I&apos;d love to chat!</p>
 
             <h2 className="wiki-h2" id="education">
-              <span>Education</span>
+              Education
               <EditLink />
             </h2>
             <p>
@@ -137,7 +299,7 @@ export default function Home() {
             </p>
 
             <h2 className="wiki-h2" id="experience">
-              <span>Experience</span>
+              Experience
               <EditLink />
             </h2>
             <div className="wiki-table-wrap">
@@ -180,7 +342,7 @@ export default function Home() {
             </div>
 
             <h2 className="wiki-h2" id="projects">
-              <span>Projects</span>
+              Projects
               <EditLink />
             </h2>
 
@@ -214,7 +376,7 @@ export default function Home() {
             </p>
 
             <h2 className="wiki-h2" id="external-links">
-              <span>External links</span>
+              External links
               <EditLink />
             </h2>
             <ul className="wiki-list">
@@ -277,8 +439,64 @@ export default function Home() {
               <span>Machine learning</span>
               <span>Software engineering</span>
             </div>
-          </div>
+          </article>
         </main>
+
+        <aside className="skin-rail skin-rail-right" aria-label="Appearance">
+          <div className="rail-heading">
+            Appearance
+            <button
+              type="button"
+              className="rail-toggle"
+              onClick={() => setAppearanceHidden((v) => !v)}
+            >
+              {appearanceHidden ? "show" : "hide"}
+            </button>
+          </div>
+          {!appearanceHidden && (
+            <div>
+              <div className="appearance-group">
+                <div className="appearance-group-label">Text</div>
+                {(["small", "standard", "large"] as const).map((v) => (
+                  <Radio
+                    key={v}
+                    name="text-size"
+                    value={v}
+                    current={textSize}
+                    onChange={setTextSize}
+                    label={v[0].toUpperCase() + v.slice(1)}
+                  />
+                ))}
+              </div>
+              <div className="appearance-group">
+                <div className="appearance-group-label">Width</div>
+                {(["standard", "wide"] as const).map((v) => (
+                  <Radio
+                    key={v}
+                    name="page-width"
+                    value={v}
+                    current={pageWidth}
+                    onChange={setPageWidth}
+                    label={v[0].toUpperCase() + v.slice(1)}
+                  />
+                ))}
+              </div>
+              <div className="appearance-group">
+                <div className="appearance-group-label">Color</div>
+                {(["automatic", "light", "dark"] as const).map((v) => (
+                  <Radio
+                    key={v}
+                    name="color-mode"
+                    value={v}
+                    current={colorMode}
+                    onChange={setColorMode}
+                    label={v[0].toUpperCase() + v.slice(1)}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </aside>
       </div>
     </div>
   );
