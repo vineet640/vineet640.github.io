@@ -377,14 +377,11 @@ export default function Home() {
                   Classifying Seyfert Galaxies
                 </h3>
                 <p>
-                  A study separating Seyfert Type 1 and Type 2 galaxies by
-                  properties other than the ratio of their emission-line
-                  strengths, analyzing 43,029 Seyferts from SIMBAD in Python
-                  across spatial distribution, redshift, color-magnitude,
-                  morphology, and luminosity, and finding significant
-                  differences in luminosity, redshift, and color-magnitude.
-                  Published in Scholarly Review Journal in March 2024 with
-                  Andrew Rebello and Neerav Mula.
+                  A study separating Seyfert Type 1 and Type 2 galaxies without
+                  relying on emission-line ratios, analyzing a large sample of
+                  Seyferts from SIMBAD in Python to find significant differences
+                  in luminosity, redshift, and color-magnitude, published in
+                  Scholarly Review Journal with Andrew Rebello and Neerav Mula.
                 </p>
               </div>
               <ProjectPreview
@@ -456,9 +453,9 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Classifying Seyfert Galaxies published paper
+                  Classifying Seyfert Galaxies
                 </a>{" "}
-                in Scholarly Review Journal
+                published paper
               </li>
             </ul>
 
