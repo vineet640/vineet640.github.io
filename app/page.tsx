@@ -195,7 +195,7 @@ export default function Home() {
                 </tr>
                 <tr>
                   <th scope="row">Employer</th>
-                  <td>Molex (a Koch company)</td>
+                  <td>None</td>
                 </tr>
                 <tr>
                   <th scope="row">Email</th>
