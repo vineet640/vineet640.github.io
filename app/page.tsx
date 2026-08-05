@@ -22,6 +22,11 @@ const SECTIONS = [
     label: "Predicting Oil using Mineral Data",
     sub: true,
   },
+  {
+    id: "classifying-seyfert-galaxies",
+    label: "Classifying Seyfert Galaxies",
+    sub: true,
+  },
   { id: "external-links", label: "External links" },
 ];
 
@@ -31,6 +36,8 @@ const SECTIONS = [
 function ProjectPreview({
   embed,
   src,
+  srcWidth,
+  srcHeight,
   href,
   caption,
 }: {
@@ -38,6 +45,10 @@ function ProjectPreview({
      that permit framing; falls back to a screenshot otherwise. */
   embed?: string;
   src?: string;
+  /* Intrinsic size of the screenshot: the box scales it down, which is what
+     keeps it sharp on high-DPI screens. */
+  srcWidth?: number;
+  srcHeight?: number;
   href: string;
   caption: string;
 }) {
@@ -50,18 +61,12 @@ function ProjectPreview({
       ) : (
         <a href={href} target="_blank" rel="noopener noreferrer">
           <span className="thumb-media">
-            {src ? (
-              <Image
-                src={src}
-                alt={`${caption} preview`}
-                /* Intrinsic size of the source: the box scales it down, which
-                   is what keeps it sharp on high-DPI screens. */
-                width={2400}
-                height={1120}
-              />
-            ) : (
-              <span className="thumb-empty">No preview yet</span>
-            )}
+            <Image
+              src={src!}
+              alt={`${caption} preview`}
+              width={srcWidth ?? 2400}
+              height={srcHeight ?? 1350}
+            />
           </span>
         </a>
       )}
@@ -157,7 +162,7 @@ export default function Home() {
           <div className="page-title-row">
             <h1 className="wiki-title">Vineet Burugu</h1>
             <a className="languages-button" href="#external-links">
-              5 external links
+              6 external links
             </a>
           </div>
 
@@ -321,6 +326,8 @@ export default function Home() {
               </div>
               <ProjectPreview
                 src="/projects/sepsis.jpg"
+                srcWidth={2400}
+                srcHeight={1120}
                 href="https://devpost.com/software/sepsis-copilot"
                 caption="Sepsis Support App on Devpost"
               />
@@ -361,6 +368,31 @@ export default function Home() {
                 embed="https://docs.google.com/presentation/d/1KUJuXl_p9bHLPgoGc6tunuMYjCOQ21rJHnIFzsdjkW8/embed?start=false&loop=false&delayms=3000"
                 href="https://docs.google.com/presentation/d/1KUJuXl_p9bHLPgoGc6tunuMYjCOQ21rJHnIFzsdjkW8/edit?usp=sharing"
                 caption="Predicting Oil using Mineral Data slide deck"
+              />
+            </div>
+
+            <div className="project">
+              <div className="project-body">
+                <h3 className="wiki-h3" id="classifying-seyfert-galaxies">
+                  Classifying Seyfert Galaxies
+                </h3>
+                <p>
+                  A study separating Seyfert Type 1 and Type 2 galaxies by
+                  properties other than the ratio of their emission-line
+                  strengths, analyzing 43,029 Seyferts from SIMBAD in Python
+                  across spatial distribution, redshift, color-magnitude,
+                  morphology, and luminosity, and finding significant
+                  differences in luminosity, redshift, and color-magnitude.
+                  Published in Scholarly Review Journal in March 2024 with
+                  Andrew Rebello and Neerav Mula.
+                </p>
+              </div>
+              <ProjectPreview
+                src="/projects/seyfert.jpg"
+                srcWidth={2400}
+                srcHeight={1350}
+                href="https://www.scholarlyreview.org/article/121712-emission-line-independent-method-to-classify-seyfert-galaxies"
+                caption="Classifying Seyfert Galaxies published paper"
               />
             </div>
 
@@ -417,6 +449,16 @@ export default function Home() {
                   Predicting Oil using Mineral Data
                 </a>{" "}
                 slide deck
+              </li>
+              <li>
+                <a
+                  href="https://www.scholarlyreview.org/article/121712-emission-line-independent-method-to-classify-seyfert-galaxies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Classifying Seyfert Galaxies published paper
+                </a>{" "}
+                in Scholarly Review Journal
               </li>
             </ul>
 
