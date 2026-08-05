@@ -378,10 +378,9 @@ export default function Home() {
                 </h3>
                 <p>
                   A study separating Seyfert Type 1 and Type 2 galaxies without
-                  relying on emission-line ratios, analyzing a large sample of
-                  Seyferts from SIMBAD in Python to find significant differences
-                  in luminosity, redshift, and color-magnitude, published in
-                  Scholarly Review Journal with Andrew Rebello and Neerav Mula.
+                  relying on emission-line ratios, finding differences in
+                  luminosity, redshift, and color-magnitude across a large
+                  SIMBAD sample.
                 </p>
               </div>
               <ProjectPreview
