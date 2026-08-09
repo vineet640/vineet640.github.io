@@ -177,6 +177,17 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr>
+                  <td className="infobox-image" colSpan={2}>
+                    <Image
+                      src="/profile.png"
+                      alt="Vineet Burugu"
+                      width={522}
+                      height={579}
+                      priority
+                    />
+                  </td>
+                </tr>
+                <tr>
                   <th scope="row">Education</th>
                   <td>The University of Texas at Austin</td>
                 </tr>

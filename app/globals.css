@@ -343,6 +343,20 @@ body {
   padding: 0.45rem 0.6rem;
 }
 
+/* The title row already draws a bottom border, so skip the generic row rule's
+   top border here to avoid a doubled line above the photo. */
+.infobox td.infobox-image {
+  padding: 0.6rem;
+  text-align: center;
+  border-top: 0;
+}
+
+.infobox td.infobox-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .infobox th {
   width: 36%;
   font-weight: bold;
