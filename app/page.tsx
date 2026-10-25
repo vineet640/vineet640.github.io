@@ -234,7 +234,11 @@ export default function Home() {
                         aria-label="GitHub"
                         title="GitHub"
                       >
-                        <svg viewBox="1.5 1.5 21 21" fill="currentColor">
+                        <svg
+                          viewBox="2 2 20 20"
+                          fill="currentColor"
+                          style={{ width: "1.3rem", height: "1.3rem" }}
+                        >
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"
