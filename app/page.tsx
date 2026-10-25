@@ -234,7 +234,7 @@ export default function Home() {
                         aria-label="GitHub"
                         title="GitHub"
                       >
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <svg viewBox="1.5 1.5 21 21" fill="currentColor">
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"
